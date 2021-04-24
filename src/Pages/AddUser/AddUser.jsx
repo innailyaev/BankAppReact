@@ -23,7 +23,6 @@ const AddUser =()=>{
                 credit: parseInt(credit)
                 }
             });
-            console.log(response);
             if(response.data.error){
                 setError(response.data.error);
             }

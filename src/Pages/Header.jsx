@@ -8,7 +8,7 @@ const Header =()=>{
         <div>
             <Menu>
                {/* <Menu.Item name="homepage"><Link to="/">Homepage</Link></Menu.Item>  */}
-               <Menu.Item name="getusers"><Link to="/getUsers" >All Users</Link></Menu.Item>
+               <Menu.Item name="getusers"><Link to="/" >All Users</Link></Menu.Item>
                <Menu.Item name="adduser"><Link to="/addUser" >Add User</Link></Menu.Item>
             </Menu>
         </div>

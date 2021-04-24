@@ -8,10 +8,8 @@ const [usersData,setUsersData] = useState([]);
 const [userId,setUserId] = useState();
 
 const getApi= async () => {
-    console.log("getApi");
     try{
         const response = await axios.get('https://bankappinna.herokuapp.com/api/users');
-        console.log(response.data);
         setUsersData(response.data);
        
     }catch(err){
@@ -24,9 +22,8 @@ const getApi= async () => {
   },[userId])
 
   const clickHandler = async (id)=>{
-    const response = await axios.delete(`https://bankappinna.herokuapp.com/api/users/${id}`);
+    await axios.delete(`https://bankappinna.herokuapp.com/api/users/${id}`);
     setUserId(id);
-    console.log(response);
   }
 
   return (

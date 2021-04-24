@@ -12,7 +12,7 @@ function App() {
         <div> 
           <Header/>
           {/* <Route path="/" exact component={Homepage}/> */}
-          <Route path="/getUsers" exact component={AllUsers}/>
+          <Route path="/" exact component={AllUsers}/>
           <Route path="/addUser" exact component={AddUser}/>
           {/* <Footer/> */}
         </div>
