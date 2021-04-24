@@ -5,6 +5,7 @@ import './AllUsers.css';
 const GetAllUsers =()=>{
 
 const [usersData,setUsersData] = useState([]);
+const [userId,setUserId] = useState();
 
 const getApi= async () => {
     console.log("getApi");
@@ -20,7 +21,13 @@ const getApi= async () => {
 
   useEffect(()=>{
     getApi();
-  },[])
+  },[userId])
+
+  const clickHandler = async (id)=>{
+    const response = await axios.delete(`https://bankappinna.herokuapp.com/api/users/${id}`);
+    setUserId(id);
+    console.log(response);
+  }
 
   return (
     <div className="usersContainer">
@@ -44,7 +51,7 @@ const getApi= async () => {
                   <td>{u.passportId}</td>
                   <td>{u.accountDetails.cash}</td>
                   <td>{u.accountDetails.credit}</td>
-                  <td><i className="fas fa-trash-alt fa-2x"></i></td>
+                  <td><i className="fas fa-trash-alt fa-2x" onClick={() => clickHandler(u.passportId)}></i></td>
                 </tr>
               ))
           }

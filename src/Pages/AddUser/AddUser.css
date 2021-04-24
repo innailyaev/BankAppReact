@@ -1,0 +1,74 @@
+.addUserContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 500px;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgba(152, 180, 184, 0.9) 0%,
+      rgba(76, 155, 179, 0.9) 59%,
+      rgba(108, 200, 212, 0.9) 100%
+    );
+    box-shadow: 5px 10px lightblue;
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    transition: all .4s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.formDiv:hover {
+    box-shadow: 8px 10px 16px 0 rgba(26, 117, 159,0.7);
+}
+
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input{
+    border: none;
+    border-bottom: solid rgb(26, 117, 159);
+    margin-bottom: 20px;
+    font-size: 20px;
+    height: 40px;
+    width: 200px;
+}
+
+input:focus{
+    outline: none;
+    background-color: none;
+}
+
+label{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.btn{
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.addUserContainer p{
+    font-size: 30px;
+}
